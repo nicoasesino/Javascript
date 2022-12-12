@@ -1,8 +1,33 @@
 let notas
 let promedio
-let multiplicacion
-let suma = 0
 let programa = -1
+
+function suma(numero1,numero2){
+    let resultado = numero1 + numero2
+    return resultado
+}
+function multiplicar(numero1,numero2){
+    let resultado = numero1 * numero2
+    return resultado
+}
+function restar(numero1,numero2){
+    let resultado = numero1 - numero2
+    return resultado
+}
+function dividir(numero1,numero2){
+    let resultado = numero1 / numero2
+    return resultado
+}
+
+function numeroUno(){
+    numero1 = Number(prompt("Ingrese el primer numero"))
+    return numero1
+    
+}
+function numeroDos(){
+    numero2 = Number(prompt("Ingrese el primer numero"))
+    return numero2
+}
 
 alert("Bienvenidos a la calculadora Mágica")
 do {
@@ -21,28 +46,26 @@ do {
         if (calculadora == 0){
             break
         }else if (calculadora == 1){
-            numero1 = Number(prompt("Ingrese el primer numero"))
-            numero2 = Number(prompt("Ingrese el segundo numero"))
-            resultado = numero1 + numero2
-            alert("Su resultado a la suma es " +resultado)
+            numeroUno()
+            numeroDos()
+            alert("Su resultado a la suma es " +suma(numero1,numero2))
         }else if (calculadora == 2){
-            numero1 = Number(prompt("Ingrese el primer numero"))
-            numero2 = Number(prompt("Ingrese el segundo numero"))
-            resultado = numero1 - numero2
-            alert("Su resultado a la resta es " +resultado)
+            numeroUno()
+            numeroDos()
+            alert("Su resultado a la resta es " +restar(numero1,numero2))
         }else if (calculadora == 3){
-            numero1 = Number(prompt("Ingrese el primer numero"))
-            numero2 = Number(prompt("Ingrese el segundo numero"))
-            resultado = numero1 * numero2
-            alert("Su resultado a la multiplicacion es " +resultado)
+            numeroUno()
+            numeroDos()
+            alert("Su resultado a la multiplicacion es " +multiplicar(numero1,numero2))
         }else if (calculadora == 4){
-            numero1 = Number(prompt("Ingrese el primer numero"))
-            numero2 = Number(prompt("Ingrese el segundo numero"))
-            resultado = numero1 / numero2
-            alert("Su resultado a la división es " +resultado)
+            numeroUno()
+            numeroDos()
+            alert("Su resultado a la división es " +dividir(numero1,numero2))
         }
     
 } while (programa != 0);
+
+
 
 
 
