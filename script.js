@@ -1,5 +1,4 @@
 let notas
-let promedio
 let programa = -1
 
 function suma(numero1,numero2){
@@ -29,17 +28,28 @@ function numeroDos(){
     return numero2
 }
 
+const alumnos = {
+    nombre: "",
+    apellido: "",
+    notas: notas,
+
+}
+
+function calculaPromedios(promedio){
+    totalNotas = Number(prompt("ingrese el total de Notas para calcular su promedio"))
+    for (var i = 0; i < totalNotas; i++) {
+    notas = Number(prompt("ingrese la nota " +i))
+    suma = suma + notas }
+    promedio = suma / totalNotas
+    alert('Su promedio final es ' + promedio)
+}
+
+
 alert("Bienvenidos a la calculadora Mágica")
 do {
     programa = Number(prompt("Que desea realizar \n 0 - Salir \n 1 - Calculadora de Promedios \n 2 - Calculadora"))
     if (programa === 1) {
-        totalNotas = Number(prompt("ingrese el total de Notas para calcular su promedio"))
-            for (var i = 0; i < totalNotas; i++) {
-            notas = Number(prompt("ingrese la nota " +i))
-            suma = suma + notas
-            }
-        promedio = suma / totalNotas
-        alert('Su promedio final es ' +promedio)
+        calculaPromedios()
     } else if (programa === 2)
         
         calculadora = Number(prompt("Que desea realizar \n 0 - Salir \n 1 - Sumar \n 2 - Restar  \n 3 - Multiplicar \n 4 - Dividir"))
